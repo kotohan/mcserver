@@ -1,0 +1,14 @@
+version: "3"
+services:
+    minecraft:
+        build: .
+        restart: always
+        volumes:
+            - .:/usr/src
+        ports:
+            - 8123:8123
+            - 25565:25565
+        environment:
+            MC_XMX: "3072M"
+            MC_XMS: "3072M"
+            MC_JAR: "minecraft.jar"
