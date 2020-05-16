@@ -1,0 +1,13 @@
+world/
+world_nether/
+world_the_end/
+logs/
+plugins/
+cache/
+.git/
+*.json
+*.jar
+*.yml
+eula.txt
+server.properties
+server-icon.png
