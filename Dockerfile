@@ -15,8 +15,7 @@ WORKDIR /usr/src
 RUN apk update && \
     apk add --no-cache curl
 # Download JRE
-RUN curl -LO https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk${jre_verf}-${jre_vere}/OpenJDK8U-jre_x64_linux_hotspot_${jre_verf}${jre_vere}.tar.gz 2>&1 && \
-    curl -LO https://github.com/adoptium/temurin${jdk_ver0}-binaries/releases/download/jdk-${jdk_ver0}.${jdk_ver1}%2B${jdk_ver2}/OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz 2>&1 && \
+RUN curl -LO https://github.com/adoptium/temurin${jdk_ver0}-binaries/releases/download/jdk-${jdk_ver0}.${jdk_ver1}%2B${jdk_ver2}/OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz 2>&1 && \
     tar -xvzf OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz && \
     mv jdk-${jdk_ver0}.${jdk_ver1}\+${jdk_ver2} /usr/jdk && \
     rm -rf OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz
