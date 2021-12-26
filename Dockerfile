@@ -1,16 +1,16 @@
 ## BUILD ARGs
 ARG alpine_ver="3.15.0"
-ARG jdk_ver0="17"
-ARG jdk_ver1="0.1"
-ARG jdk_ver2="12"
+ARG jdk_major="17"
+ARG jdk_minor="0.1"
+ARG jdk_micro="12"
 ARG spigot_ver="1.18.1"
 ## BUILD STAGE
 FROM alpine:${alpine_ver} as builder
 LABEL maintainer="nakochi.me"
 # ARGs
-ARG jdk_ver0
-ARG jdk_ver1
-ARG jdk_ver2
+ARG jdk_major
+ARG jdk_minor
+ARG jdk_micro
 ARG spigot_ver
 # Environment variables
 ENV PATH=$PATH:/usr/jdk/bin
@@ -20,13 +20,12 @@ WORKDIR /usr/src
 RUN apk update && \
     apk add --no-cache curl git
 # Download JRE
-RUN curl -LO https://github.com/adoptium/temurin${jdk_ver0}-binaries/releases/download/jdk-${jdk_ver0}.${jdk_ver1}%2B${jdk_ver2}/OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz 2>&1 && \
-    tar -xvzf OpenJDK${jdk_ver0}U-jdk_x64_alpine-linux_hotspot_${jdk_ver0}.${jdk_ver1}_${jdk_ver2}.tar.gz && \
-    mv jdk-${jdk_ver0}.${jdk_ver1}\+${jdk_ver2} /usr/jdk
+RUN curl -LO https://github.com/adoptium/temurin${jdk_major}-binaries/releases/download/jdk-${jdk_major}.${jdk_minor}%2B${jdk_micro}/OpenJDK${jdk_major}U-jdk_x64_alpine-linux_hotspot_${jdk_major}.${jdk_minor}_${jdk_micro}.tar.gz 2>&1 && \
+    tar -xvzf OpenJDK${jdk_major}U-jdk_x64_alpine-linux_hotspot_${jdk_major}.${jdk_minor}_${jdk_micro}.tar.gz && \
+    mv jdk-${jdk_major}.${jdk_minor}\+${jdk_micro} /usr/jdk
 # Download BuildTools.jar
 RUN curl -LO https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar 2>&1 && \
-    java -jar ./BuildTools.jar --rev ${spigot_ver} && \
-    ls -la
+    java -jar ./BuildTools.jar --rev ${spigot_ver}
 ## PROD STAGE
 FROM alpine:${alpine_ver} as prod
 LABEL maintainer="nakochi.me"
