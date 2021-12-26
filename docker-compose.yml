@@ -11,4 +11,3 @@ services:
         environment:
             MC_XMX: "3072M"
             MC_XMS: "3072M"
-            MC_JAR: "minecraft.jar"
