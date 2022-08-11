@@ -6,9 +6,8 @@ services:
         volumes:
             - .:/usr/src
         ports:
-            - 8123:8123
             - 25565:25565
         environment:
-            MC_XMX: "3072M"
-            MC_XMS: "3072M"
+            MC_XMX: "5120M"
+            MC_XMS: "4096M"
 

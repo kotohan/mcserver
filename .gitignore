@@ -1,0 +1,13 @@
+world/*
+world_nether/*
+world_the_end/*
+logs/*
+plugins/*
+bundler/*
+*.json
+*.txt
+*.yml
+*.png
+*.properties
+!docker-compose.yml
+
