@@ -44,7 +44,6 @@ COPY --from=builder /usr/src/spigot-${spigot_ver}.jar /usr/minecraft.jar
 RUN echo '#!/bin/sh' >> /usr/bin/minecraft && \
     echo 'echo "Starting Minecraft Server..."' >> /usr/bin/minecraft && \
     echo 'echo "Mem: ${MC_XMX}"' >> /usr/bin/minecraft && \
-    echo 'echo "Bin: ${MC_JAR}"' >> /usr/bin/minecraft && \
     echo 'exec java -Xmx${MC_XMX} -Xms${MC_XMS} -Dlog4j2.formatMsgNoLookups=true -jar /usr/minecraft.jar nogui' >> /usr/bin/minecraft && \
     chmod +x /usr/bin/minecraft
 # Set ENTRYPOINT

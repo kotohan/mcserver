@@ -3,3 +3,12 @@ world_nether/
 world_the_end/
 logs/
 plugins/
+cache/
+.git/
+*.json
+*.jar
+*.yml
+*.txt
+*.properties
+*.png
+

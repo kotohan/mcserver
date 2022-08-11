@@ -4,10 +4,12 @@ world_the_end/*
 logs/*
 plugins/*
 bundler/*
+cache/*
 *.json
-*.txt
+*.jar
 *.yml
-*.png
+*.txt
 *.properties
+*.png
 !docker-compose.yml
 
