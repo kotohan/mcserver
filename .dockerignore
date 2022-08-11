@@ -8,6 +8,7 @@ cache/
 *.json
 *.jar
 *.yml
-eula.txt
-server.properties
-server-icon.png
+*.txt
+*.properties
+*.png
+
