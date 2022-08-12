@@ -1,5 +1,5 @@
 # Minecraft Spigot Server Container Kit
-![current_ver](https://img.shields.io/static/v1?label=Server%20Version&message=1.18.1&color=blueviolet)
+![current_ver](https://img.shields.io/static/v1?label=Server%20Version&message=1.18.1&color=blueviolet&logo=minecraft&logoColor=white)
 ![support_apple_m](https://img.shields.io/static/v1?label=Apple%20M&message=Supported&color=brightgreen&logo=apple&logoColor=white)
 ![support_x86_64](https://img.shields.io/static/v1?label=x86_64&message=Supported&color=brightgreen&logo=intel&logoColor=white)
   
