@@ -26,7 +26,7 @@ RUN curl -LO https://github.com/adoptium/temurin${jdk_major}-binaries/releases/d
 # Download JRE
 RUN curl -LO https://github.com/adoptium/temurin${jdk_major}-binaries/releases/download/jdk-${jdk_major}.${jdk_minor}%2B${jdk_micro}/OpenJDK${jdk_major}U-jre_x64_alpine-linux_hotspot_${jdk_major}.${jdk_minor}_${jdk_micro}.tar.gz 2>&1 && \
     tar -xvzf OpenJDK${jdk_major}U-jre_x64_alpine-linux_hotspot_${jdk_major}.${jdk_minor}_${jdk_micro}.tar.gz && \
-    mv jre-${jdk_major}.${jdk_minor}\+${jdk_micro} /usr/jre
+    mv jdk-${jdk_major}.${jdk_minor}\+${jdk_micro}-jre /usr/jre
 # Download BuildTools.jar
 RUN curl -LO https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar 2>&1 && \
     java -jar ./BuildTools.jar --rev ${spigot_ver}
