@@ -1,7 +1,5 @@
 # Minecraft Spigot Server Container Kit
-![current_ver](https://img.shields.io/static/v1?label=Server%20Version&message=1.18.1&color=blueviolet&logo=minecraft&logoColor=white)
-![support_arm64](https://img.shields.io/static/v1?label=arm64&message=Supported&color=brightgreen&logo=arm&logoColor=white)
-![support_apple_m](https://img.shields.io/static/v1?label=Apple%20M&message=Supported&color=brightgreen&logo=apple&logoColor=white)
+![current_ver](https://img.shields.io/static/v1?label=Server%20Version&message=1.21.1&color=blueviolet&logo=minecraft&logoColor=white)
 ![support_x86_64](https://img.shields.io/static/v1?label=x86_64&message=Supported&color=brightgreen&logo=intel&logoColor=white)
   
 SpigotマインクラフトサーバをDockerコンテナーで簡単に起動できます  
