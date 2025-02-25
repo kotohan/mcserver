@@ -1,9 +1,9 @@
 ## BUILD ARGs
-ARG alpine_ver="3.21.2"
+ARG alpine_ver="3.21.3"
 ARG jdk_major="21"
-ARG jdk_minor="0.5"
-ARG jdk_micro="11"
-ARG spigot_ver="1.21.1"
+ARG jdk_minor="0.6"
+ARG jdk_micro="7"
+ARG spigot_ver="1.21.4"
 ## BUILD STAGE
 FROM alpine:${alpine_ver} as builder
 LABEL maintainer="nakochi.me"
