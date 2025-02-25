@@ -7,7 +7,7 @@ ARG jdk_arch="x64"
 #ARG jdk_arch="aarch64"
 ARG spigot_ver="1.21.4"
 ## BUILD STAGE
-FROM alpine:${alpine_ver} as builder
+FROM alpine:${alpine_ver} AS builder
 LABEL maintainer="nakochi.me"
 # ARGs
 ARG jdk_major
@@ -34,7 +34,7 @@ RUN curl -LO https://github.com/adoptium/temurin${jdk_major}-binaries/releases/d
 RUN curl -LO https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar 2>&1 && \
     java -jar ./BuildTools.jar --rev ${spigot_ver}
 ## PROD STAGE
-FROM alpine:${alpine_ver} as prod
+FROM alpine:${alpine_ver} AS prod
 LABEL maintainer="nakochi.me"
 # ARGs
 ARG spigot_ver

@@ -6,9 +6,8 @@ services:
         volumes:
             - .:/usr/src
         ports:
-            - 25565:25565
-            - 24454:24454
+            - "25565:25565"
+            - "24454:24454/udp"
         environment:
             MC_XMX: "5120M"
             MC_XMS: "4096M"
-
